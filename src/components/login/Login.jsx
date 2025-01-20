@@ -19,6 +19,7 @@ const FormStyled = styled("form")({
         padding: "10px",
         borderRadius: "5px",
         cursor: "pointer",
+        marginTop: "20px",
     },
     "& input": {
         padding: "5px",
@@ -60,9 +61,9 @@ const Login = () => {
         <Box
             component="section"
             sx={{
-                padding: 2,
+                padding: "2em",
                 borderRadius: 2,
-                backgroundColor: "#eb6dc4",
+                backgroundColor: "#7975b7",
             }}
         >
             <FormStyled onSubmit={handleSubmitEvent}>

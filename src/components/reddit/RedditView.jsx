@@ -8,6 +8,7 @@ const RedditView = () => {
     const [posts, setPosts] = useState([]);
     const [postIsClicked, setPostIsClicked] = useState(false);
     const [singlePost, setSinglePost] = useState([]);
+    const [loading, setLoading] = useState(true);
     const auth = useAuth();
 
     useEffect(() => {
@@ -16,13 +17,16 @@ const RedditView = () => {
             .then((data) => {
                 const posts = data.data.children.map((child) => child.data);
                 setPosts(posts);
+                setLoading(false);
             });
     }, []);
+
+    if (loading) return <div>Loading...</div>;
 
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" sx={{ backgroundColor: "#eb6dc4" }}>
+                <AppBar position="static" sx={{ backgroundColor: "#7975b7" }}>
                     <Toolbar>
                         <Typography
                             variant="h6"
