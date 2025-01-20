@@ -1,5 +1,11 @@
+# Setting up project and run
+
+```
 npm install
 npm run dev
+```
 
-username: admin
-password: password
+## Hardcoded login credentials
+
+-   username: admin
+-   password: password
