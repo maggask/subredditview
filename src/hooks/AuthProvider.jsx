@@ -11,7 +11,10 @@ const AuthProvider = ({ children }) => {
         try {
             // Under normal circumstances, this would be an API call
             // but there is no API so this will be hardcoded
-            if (data.username === "admin" && data.password === "password") {
+            if (
+                data.username === "admin" &&
+                data.password === "securepassword"
+            ) {
                 setUser(data.username);
                 // hardcode some fake token, normally this would be returned from the API
                 setToken("token");

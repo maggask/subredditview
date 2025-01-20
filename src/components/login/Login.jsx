@@ -40,7 +40,6 @@ const Login = () => {
         e.preventDefault();
 
         if (input.username !== "" && input.password !== "") {
-            console.log("login action");
             auth.loginAction(input);
             return;
         }

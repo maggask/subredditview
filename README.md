@@ -8,4 +8,4 @@ npm run dev
 ## Hardcoded login credentials
 
 -   username: admin
--   password: password
+-   password: securepassword
