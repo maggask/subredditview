@@ -14,17 +14,20 @@ const FormStyled = styled("form")({
         gap: "10px",
     },
     "& .btn-submit": {
-        backgroundColor: "#f5f5f5",
-        color: "#000",
+        backgroundColor: "#a5a2ce",
+        color: "#7975b7",
         padding: "10px",
         borderRadius: "5px",
         cursor: "pointer",
         marginTop: "20px",
     },
+    "& label": {
+        color: "#a5a2ce",
+    },
     "& input": {
         padding: "5px",
         borderRadius: "5px",
-        border: "1px solid #000",
+        border: "1px solid #7975b7",
         backgroundColor: "#fff",
         color: "#000",
     },
@@ -86,7 +89,7 @@ const Login = () => {
                         onChange={handleInput}
                     />
                 </div>
-                <Button className="btn-submit" type="submit" size="small">
+                <Button className="btn-submit" type="submit" size="large">
                     Login
                 </Button>
             </FormStyled>

@@ -26,8 +26,6 @@ const RedditComments = ({ postId }) => {
         fetchComments();
     }, [postId]);
 
-    console.log(comments);
-
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error loading comments</div>;
 
