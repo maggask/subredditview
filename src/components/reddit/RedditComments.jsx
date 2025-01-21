@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import { Box, Typography } from "@mui/material";
 
@@ -33,9 +33,8 @@ const RedditComments = ({ postId }) => {
         <div>
             <ul style={{ listStyleType: "none", padding: 0 }}>
                 {comments.map((comment) => (
-                    <>
+                    <Fragment key={comment.id}>
                         <Box
-                            key={comment.id}
                             component="section"
                             sx={{
                                 margin: "10px 0",
@@ -75,7 +74,6 @@ const RedditComments = ({ postId }) => {
                                         }}
                                     >
                                         <Box
-                                            key={reply.id}
                                             component="section"
                                             sx={{
                                                 margin: "10px 0 0 30px",
@@ -84,7 +82,7 @@ const RedditComments = ({ postId }) => {
                                                 borderRadius: 2,
                                             }}
                                         >
-                                            <li key={comment.id}>
+                                            <li key={reply.id}>
                                                 <Typography
                                                     variant="body2"
                                                     color="textSecondary"
@@ -106,7 +104,7 @@ const RedditComments = ({ postId }) => {
                                         </Box>
                                     </Box>
                                 ))}
-                    </>
+                    </Fragment>
                 ))}
             </ul>
         </div>

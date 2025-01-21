@@ -67,7 +67,7 @@ const RedditPost = ({ post, onClickBack }) => {
                 <Typography variant="h6" component="h3" align="left">
                     Comments {post.num_comments}
                 </Typography>
-                <RedditComments postId={post.id} />
+                <RedditComments key={post.id} postId={post.id} />
             </CardStyled>
         </>
     );
